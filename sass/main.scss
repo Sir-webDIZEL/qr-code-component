@@ -1,0 +1,78 @@
+@use './_colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: $Light-gray;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	font-family: 'Outfit', sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100vh;
+	max-width: 1200px;
+}
+
+.qr-code {
+	display: flex;
+	justify-content: center;
+	margin: 1.5em;
+
+	.qr__card {
+		width: 320px;
+		margin: 5em auto;
+		background-color: $White;
+		border-radius: 2rem;
+		box-shadow: 5px 5px 10px $Dark-blue;
+
+		&-img {
+			margin: 1.5em;
+			
+			img {
+				width: 100%;
+				border-radius: 1.5rem;
+			}
+		}
+
+		&-box {
+			margin: 0 3em 3.5em 3em;
+			text-align: center;
+		}
+
+		&-heading {
+			padding-bottom: 1em;
+			font-size: 2rem;
+		}
+
+		&-text {
+			font-size: 1.5rem;
+			color: $Grayish-blue;
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
